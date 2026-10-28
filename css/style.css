@@ -1,9 +1,37 @@
+/********** Override Bootstrap Orange to Light Blue **********/
+:root {
+    --bs-primary: #8ed8ff;
+}
+
+.text-primary,
+.bi,
+.bi::before {
+    color: #8ed8ff !important;
+}
+
+.btn-primary {
+    color: #000 !important;
+    background-color: #8ed8ff !important;
+    border-color: #8ed8ff !important;
+}
+
+.btn-primary:hover {
+    color: #000 !important;
+    background-color: #6bbaf7 !important;
+    border-color: #6bbaf7 !important;
+}
+
 /********** Template CSS **********/
 :root {
-    --primary: #FD5D14;
-    --secondary: #FDBE33;
+    --primary: #0EA5E9;
+    --secondary: #38BDF8;
     --light: #F4F6F8;
     --dark: #040F28;
+}
+
+/* Override Bootstrap's hardcoded orange with your primary blue */
+.text-primary {
+    color: var(--primary) !important;
 }
 
 .pt-6 {
@@ -123,6 +151,28 @@
         padding: 10px 0;
     }
 }
+/********** Equal Height Carousel Fix **********/
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 600px; /* Adjust this height to match your preferred desktop slider height */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px; /* Adjust this height for mobile/smaller screens */
+    }
+}
 
 .carousel-caption {
     top: 0;
@@ -151,8 +201,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(4, 15, 40, .7), rgba(4, 15, 40, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(4, 15, 40, .7), rgba(4, 15, 40, .7)), url(../Web-Images/hero\ \(5\).jpg) center center no-repeat;
     background-size: cover;
+}
+
+/********** Equal Height Service Cards **********/
+.row.g-5 > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.service-item .px-4 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.service-item img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .service-item .service-icon {
@@ -204,6 +280,42 @@
     transition-delay: .3s;
     z-index: 2;
     opacity: 0;
+}
+
+/********** Equal Height Testimonial Carousel Items **********/
+.testimonial-carousel .owl-stage {
+    display: flex;
+}
+
+.testimonial-carousel .owl-item {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.testimonial-carousel .row.gx-4.align-items-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+/********** Uniform Testimonial Customer Images **********/
+.testimonial .owl-carousel img {
+    height: 180px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+
+/********** Testimonial Fixes **********/
+.testimonial-carousel .owl-item {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.testimonial-carousel .owl-item.active {
+    opacity: 1;
+}
+.testimonial {
+    overflow: hidden;
 }
 
 .portfolio-item:hover .portfolio-btn {
@@ -269,3 +381,23 @@
     background: var(--primary);
     transform: skew(40deg);
 }
+
+/********** Equal Height Portfolio Items **********/
+.portfolio-container > [class*="portfolio-item"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.portfolio-box img {
+    height: 280px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+

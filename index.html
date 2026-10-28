@@ -13,7 +13,8 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
@@ -29,6 +30,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .navbar-logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid var(--primary);
+        }
+    </style>
 </head>
 
 <body>
@@ -46,10 +58,10 @@
             </div>
             <div class="col-lg-4 text-center border-start border-end py-3">
                 <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Email Us</h6>
-                        <span>info@example.com</span>
+                        <span>sunshineelectricalcompany1@gmail.com</span>
                     </div>
                 </div>
             </div>
@@ -71,7 +83,9 @@
     <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
             <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>SUNSHINE</h1>
+                <h1 class="m-0 display-4 text-uppercase text-white d-flex align-items-center">
+                    <img src="img/Logo.jpeg" alt="Logo" class="navbar-logo-img">SUNSHINE ELECTRICAL
+                </h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -87,35 +101,38 @@
                             <a href="project.html" class="dropdown-item">Our Project</a>
                             <a href="team.html" class="dropdown-item">The Team</a>
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <!--a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a-->
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    <!--a href="" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote <i class="bi bi-arrow-right"></i></a-->
                 </div>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
 
-
     <!-- Carousel Start -->
-    <div class="container-fluid p-0">
+    <div     @media (max-width: 768px) {
+        #header-carousel,
+        #header-carousel .carousel-inner,
+        #header-carousel .carousel-item {
+            height: 420px;
+        }
+    }>
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/Hero-1.jpg" alt="Image">
+                    <img class="w-100" src="Web-Images/hero-(3).jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <i class="fa fa-home fa-4x text-primary mb-4 d-none d-sm-block"></i>
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">Powering Homes. <br>Powering Industries.</h1>
+                            <h1 class="display-2 text-uppercase text-white mb-md-4">Powering Homes. <br>Powering
+                                Industries.</h1>
                             <a href="contact.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Get Start</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/6-Service.jpg" alt="Image">
+                    <img class="w-100" src="Web-Images/hero (7).jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i>
@@ -125,13 +142,11 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -144,19 +159,24 @@
     <div class="container-fluid py-6 px-5">
         <div class="row g-5">
             <div class="col-lg-7">
-                <h1 class="display-5 text-uppercase mb-4">We are <span class="text-primary">the Leader</span> in Construction Industry</h1>
+                <h1 class="display-5 text-uppercase mb-4">We are <span class="text-primary">the Leader</span> in
+                    Electrical Industry</h1>
                 <!--<h4 class="text-uppercase mb-3 text-body">Tempor erat elitr at rebum at at clita. Diam dolor diam ipsum tempor sit diam amet diam et eos labore</h4>-->
-                <p>Sunshine Electrical Company provides practical, professional electrical solutions designed around safety, reliability, and quality workmanship.</p>
+                <p>Sunshine Electrical Company provides practical, professional electrical solutions designed around
+                    safety, reliability, and quality workmanship.</p>
                 <div class="row gx-5 py-2">
                     <div class="col-sm-6 mb-2">
-                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Residential & industrial wiring</p>
-                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Quality focused electrical installation</p>
-                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Repairs and maintenance solutions</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Residential & industrial
+                            wiring</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Quality focused electrical
+                            installation</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Repairs and maintenance
+                            solutions</p>
                     </div>
                     <div class="col-sm-6 mb-2">
                         <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Perfect Planning</p>
                         <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Professional Workers</p>
-                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>First Working Process</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Fast Working Process</p>
                     </div>
                 </div>
                 <!--p class="mb-4">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos labore</p-->
@@ -164,18 +184,20 @@
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
                 <div class="position-relative bg-dark-radial h-100 ms-5">
-                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="img/About-Us (2).jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="Web-Images/about-102.jpg"
+                        style="object-fit: cover;">
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
-    
+
 
     <!-- Services Start -->
     <div class="container-fluid bg-light py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Construction Services</h1>
+            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Electrical
+                Services</h1>
         </div>
         <div class="row g-5">
             <div class="col-lg-4 col-md-6">
@@ -226,7 +248,7 @@
                     <div class="px-4 pb-4">
                         <h4 class="text-uppercase mb-3">Repairs & Maintenance</h4>
                         <p>Electrical troubleshooting, repairs, and maintenance to keep systems dependable.</p>
-                            a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -268,7 +290,8 @@
                 <div class="mb-4">
                     <h1 class="display-5 text-uppercase mb-4">Request A <span class="text-primary">Call Back</span></h1>
                 </div>
-                <p class="mb-5">Have a question about your electrical project or need assistance? Request a call back from our experts and we'll get in touch with you quick to discuss your needs and provide solutions.
+                <p class="mb-5">Have a question about your electrical project or need assistance? Request a call back
+                    from our experts and we'll get in touch with you quick to discuss your needs and provide solutions.
                 </p>
                 <!--a class="btn btn-primary py-3 px-5" href="">Get A Quote</a-->
             </div>
@@ -277,23 +300,25 @@
                     <form>
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                <input type="text" class="form-control border-0" placeholder="Your Name"
+                                    style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                <input type="email" class="form-control border-0" placeholder="Your Email"
+                                    style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="date" id="date" data-target-input="nearest">
-                                    <input type="text"
-                                        class="form-control border-0 datetimepicker-input"
-                                        placeholder="Call Back Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                                    <input type="text" class="form-control border-0 datetimepicker-input"
+                                        placeholder="Call Back Date" data-target="#date" data-toggle="datetimepicker"
+                                        style="height: 55px;">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="time" id="time" data-target-input="nearest">
-                                    <input type="text"
-                                        class="form-control border-0 datetimepicker-input"
-                                        placeholder="Call Back Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                                    <input type="text" class="form-control border-0 datetimepicker-input"
+                                        placeholder="Call Back Time" data-target="#time" data-toggle="datetimepicker"
+                                        style="height: 55px;">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -314,7 +339,8 @@
     <!-- Portfolio Start -->
     <div class="container-fluid bg-light py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 text-uppercase mb-4">Some Of Our <span class="text-primary">Popular</span> Dream Projects</h1>
+            <h1 class="display-5 text-uppercase mb-4">Some Of Our <span class="text-primary">Popular</span> Dream
+                Projects</h1>
         </div>
         <!--div class="row gx-5">
             <div class="col-12 text-center">
@@ -348,7 +374,8 @@
                     <img class="img-fluid w-100" src="img/Electrical-Installation.jpeg" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Electrical Installation</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Lower Johnsonville, Montserrado County</span>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Lower
+                            Johnsonville, Montserrado County</span>
                     </a>
                     <a class="portfolio-btn" href="img/Electrical-Installation.jpeg" data-lightbox="portfolio">
                         <i class="bi bi-plus text-white"></i>
@@ -372,7 +399,8 @@
                     <img class="img-fluid w-100" src="img/Industrial-wiring-2-img.jpeg" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Industrial Wiring</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</span>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Lower
+                            Johnsonville, Montserrado County</span>
                     </a>
                     <a class="portfolio-btn" href="img/Industrial-wiring-2-img.jpeg" data-lightbox="portfolio">
                         <i class="bi bi-plus text-white"></i>
@@ -420,7 +448,7 @@
     <!-- Portfolio End -->
 
 
-    <!-- Team Start >
+    <!-- Team Start -->
     <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 text-uppercase mb-4">We Are <span class="text-primary">Professional & Expert</span> Workers</h1>
@@ -430,16 +458,16 @@
                 <div class="row g-0">
                     <div class="col-10" style="min-height: 300px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="img/team-1.jpg" style="object-fit: cover;">
+                            <img class="position-absolute w-100 h-100" src="Web-Images/SUNSHINE-C.E.O.jpeg" style="object-fit: cover;">
                         </div>
                     </div>
                     <div class="col-2">
                         <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
-                            <a class="btn" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn" href="https://www.facebook.com/profile.php?id=100085193465851"><i class="fab fa-facebook-f"></i></a>
+                            <!--a class="btn" href="#"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn" href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a class="btn" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn" href="#"><i class="fab fa-youtube"></i></a-->
                         </div>
                     </div>
                     <div class="col-12">
@@ -450,7 +478,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <!--div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="row g-0">
                     <div class="col-10" style="min-height: 300px;">
                         <div class="position-relative h-100">
@@ -530,7 +558,8 @@
     <!-- Testimonial Start -->
     <div class="container-fluid bg-light py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 text-uppercase mb-4">What Our <span class="text-primary">Happy Cleints</span> Say!!!</h1>
+            <h1 class="display-5 text-uppercase mb-4">What Our <span class="text-primary">Happy Cleints</span> Say!!!
+            </h1>
         </div>
         <div class="row gx-0 align-items-center">
             <div class="col-xl-4 col-lg-5 d-none d-lg-block">
@@ -541,27 +570,32 @@
                     <div class="owl-carousel testimonial-carousel">
                         <div class="row gx-4 align-items-center">
                             <div class="col-xl-4 col-lg-5 col-md-5">
-                                <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0" src="img/Testimonial-1.webp" alt="">
+                                <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0"
+                                    src="Web-Images/testimonal.jpg" alt="">
                             </div>
                             <div class="col-xl-8 col-lg-7 col-md-7">
                                 <h4 class="text-uppercase mb-0">David Kollie</h4>
                                 <p>Homeowner</p>
                                 <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i>
-                                    Sunshine Electrical Company did an excellent job with the electrical work at my home. 
-                                    The team was professional, careful, and completed the work as promised. 
-                                    I would gladly recommend their services to anyone looking for reliable electrical work.</p>
+                                    Sunshine Electrical Company did an excellent job with the electrical work at my
+                                    home.
+                                    The team was professional, careful, and completed the work as promised.
+                                    I would gladly recommend their services to anyone looking for reliable electrical
+                                    work.</p>
                             </div>
                         </div>
                         <div class="row gx-4 align-items-center">
                             <div class="col-xl-4 col-lg-5 col-md-5">
-                                <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0" src="img/Testimonial-2.webp" alt="">
+                                <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0"
+                                    src="Web-Images/testimonal (2).jpg" alt="">
                             </div>
                             <div class="col-xl-8 col-lg-7 col-md-7">
                                 <h4 class="text-uppercase mb-0">James Smith</h4>
                                 <p>Business Owner</p>
-                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i> I was impressed with the 
-                                    professionalism and quality of work from Sunshine Electrical Company. 
-                                    They handled my electrical installation efficiently 
+                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i> I was
+                                    impressed with the
+                                    professionalism and quality of work from Sunshine Electrical Company.
+                                    They handled my electrical installation efficiently
                                     and paid close attention to safety and detail</p>
                             </div>
                         </div>
@@ -573,7 +607,7 @@
     <!-- Testimonial End -->
 
 
-    <!-- Blog Start >
+    <!-- Blog Start ->
     <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 text-uppercase mb-4">Latest <span class="text-primary">Social Media</span> Post</h1>
@@ -636,25 +670,30 @@
         </div>
     </div>
     <!-- Blog End -->
-    
+
 
     <!-- Footer Start -->
     <div class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5">
         <div class="row g-5">
             <div class="col-lg-6 pe-lg-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>SUNSHINE <BR>ELECTRICAL</BR></h1>
+                    <h1 class="m-0 display-4 text-uppercase text-white"><i
+                            class="bi bi-building text-primary me-2"></i>SUNSHINE <BR>ELECTRICAL</BR></h1>
                 </a>
-                <p>We provide reliable electrical services for homes, businesses, and industrial facilities, 
+                <p>We provide reliable electrical services for homes, businesses, and industrial facilities,
                     with a focus on quality workmanship, safety, and dependable service.</p>
                 <p><i class="fa fa-map-marker-alt me-2"></i>Lower Johnsonville, Montserrado County, Liberia</p>
                 <p><i class="fa fa-phone-alt me-2"></i>+231774292286</p>
-                <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
+                <p><i class="fa fa-envelope me-2"></i>sunshineelectricalcompany1@gmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="https://www.facebook.com/profile.php?id=100085193465851"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <!--a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="#"><i
+                            class="fab fa-instagram"></i></a-->
                 </div>
             </div>
             <div class="col-lg-6 ps-lg-5">
@@ -662,21 +701,23 @@
                     <div class="col-sm-6">
                         <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                            <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Our
+                                Services</a>
                             <!--a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a-->
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                            <a class="text-white-50" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <h4 class="text-white text-uppercase mb-4">Popular Links</h4>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                            <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Our
+                                Services</a>
                             <!--a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a-->
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                            <a class="text-white-50" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                         </div>
                     </div>
                     <!--div class="col-sm-12">
