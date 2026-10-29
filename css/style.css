@@ -146,11 +146,51 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-dark .navbar-nav .nav-link  {
-        margin-left: 0;
-        padding: 10px 0;
+    .navbar-brand h1 {
+        font-size: 1.7rem;
+        white-space: normal;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 0.25rem 0;
     }
 }
+
+@media (max-width: 767.98px) {
+    #header-carousel,
+    #header-carousel .carousel-inner,
+    #header-carousel .carousel-item {
+        height: 420px;
+    }
+
+    .carousel-caption {
+        padding: 0 1rem;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+
+    .display-5,
+    h1.display-5 {
+        font-size: 2.2rem;
+    }
+
+    .service-item,
+    .portfolio-box {
+        margin-bottom: 1.5rem;
+    }
+
+    .bg-light.text-center.p-5 {
+        padding: 1.5rem !important;
+    }
+}
+
 /********** Equal Height Carousel Fix **********/
 .carousel-inner {
     position: relative;
